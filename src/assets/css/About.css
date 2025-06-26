@@ -55,7 +55,7 @@
 }
 
 .hand-img {
-  width: 280px; /* Exact 280px width as specified in user preferences */
+  width: 500px; /* Exact 280px width as specified in user preferences */
   height: auto;
   transform: translateX(-30%) rotate(90.34deg);
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
