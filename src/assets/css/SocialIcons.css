@@ -1,0 +1,59 @@
+/* Social icons column */
+.social-icons-vertical {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 40px;
+  bottom: 40px;
+  transform: none;
+  z-index: 999;
+  gap: 15px;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #333;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  color: white;
+  background-color: #E86C00;
+  box-shadow: 0 4px 10px rgba(232, 108, 0, 0.2);
+}
+
+/* Dark mode styles */
+.dark-mode .social-icon {
+  background-color: #333;
+  color: #f8f8f8;
+}
+
+.dark-mode .social-icon:hover {
+  background-color: #E86C00;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .social-icons-vertical {
+    bottom: 20px;
+    left: 10px;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,372 @@
+.about-section {
+  padding: 120px 0;
+  background-color: var(--light-color);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Background shapes */
+.bg-shape {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Yellow blobs removed in favor of Vector 3.png image */
+
+.gray-blob-1 {
+  display: none; /* Remove additional gray blobs that aren't in reference image */
+}
+
+.gray-blob-2 {
+  display: none; /* Remove additional gray blobs that aren't in reference image */
+}
+
+/* Vector 1 background for hand image */
+.vector1-wrapper {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  height: auto;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.vector1-img {
+  position: relative;
+  width: 400px;
+  height: auto;
+  transform: translateX(-20%);
+}
+
+/* Hand image */
+.hand-container {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hand-img {
+  width: 280px; /* Exact 280px width as specified in user preferences */
+  height: auto;
+  transform: translateX(-30%) rotate(90.34deg);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Title with line styling */
+.title-with-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.horizontal-line {
+  height: 2px;
+  background-color: #666666;
+  margin-left: 20px;
+  flex-grow: 1;
+  min-width: 350px;
+  max-width: none;
+}
+
+/* Smaller width divider at bottom */
+.divider {
+  height: 1px;
+  background-color: #666666;
+  margin: 35px auto 20px;
+  width: 30%;
+}
+
+.website-url {
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+  color: #999;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Social icons column */
+.social-icons-vertical {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: auto;
+  bottom: 40px;
+  transform: none;
+  z-index: 20;
+  gap: 15px;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #333;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  color: white;
+  background-color: #E86C00;
+  box-shadow: 0 4px 10px rgba(232, 108, 0, 0.2);
+}
+
+/* About text content */
+.about-content {
+  padding-left: 0;
+  position: relative;
+  margin-top: 0;
+  margin-left: 260px; /* Margin to accommodate the hand image as specified in user preferences */
+  max-width: 700px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.about-text strong {
+  color: #000;
+  font-weight: 600;
+}
+
+
+/* Shapes styling */
+.about-shapes {
+  position: relative;
+  height: 100%;
+}
+
+.hand-shape {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 250px;
+  height: 250px;
+  background-image: url('../images/hand.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Styling for Vector 3.png image (top right) */
+.vector3-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.vector3-img {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 20%;
+  /* transform: rotate(28deg); */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Styling for Vector 4.png image (bottom left) */
+.vector4-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.vector4-img {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 15%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Styling for Vector 5.png image (bottom right) */
+.vector5-wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.vector5-img {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 15%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gray-blob {
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  width: 350px;
+  height: 350px;
+  background-color: #f0f0f0;
+  border-radius: 60% 40% 30% 70%;
+  z-index: 0;
+}
+
+/* Website URL */
+.website-url {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+  font-size: 0.8rem;
+  color: #666;
+  padding-bottom: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .social-icons-column {
+    position: relative;
+    flex-direction: row;
+    margin-bottom: 30px;
+    gap: 15px;
+  }
+  
+  .about-content {
+    padding-left: 15px;
+  }
+  
+  .about-shapes {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-text h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.about-content {
+  padding-left: 30px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.about-buttons {
+  margin-top: 30px;
+}
+
+.download-cv-btn {
+  background-color: var(--orange-color);
+  border: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.about-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.info-item {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  width: 30%;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-item h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .about-content {
+    padding-left: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .image-container:before {
+    width: 60%;
+    height: 60%;
+  }
+  
+  .about-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .info-item {
+    width: 100%;
+  }
+}

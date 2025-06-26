@@ -1,0 +1,47 @@
+.vertical-email {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.email-link {
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+.email-link:hover {
+  color: #E86C00;
+  transform: rotate(90deg) translateX(-5px);
+}
+
+/* Dark mode styling */
+.dark-mode .email-link {
+  color: #f8f8f8;
+}
+
+.dark-mode .email-link:hover {
+  color: #E86C00;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .vertical-email {
+    right: 20px;
+    bottom: 20px;
+  }
+  
+  .email-link {
+    font-size: 12px;
+  }
+}
